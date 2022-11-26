@@ -3,8 +3,8 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-from tkinter import *
-import calendar
+from tkinter import Tk, Label, Entry, Button
+from calendar import calendar
 
 
 def show_Calendar():
@@ -13,7 +13,7 @@ def show_Calendar():
     gui.title("JG Calendar")
     gui.geometry("600x600")
     year = int(year_field.get())
-    gui_content = calendar.calendar(year)
+    gui_content = calendar(year)
     calYear = Label(gui, text=gui_content, font="times 10 bold")
     calYear.grid(row=5, column=1, padx=20)
     gui.mainloop()
